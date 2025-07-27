@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% block content %}
+<a href="{{ url_for('new_car') }}" class="btn btn-success mb-3">Add Car</a>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Year</th>
+      <th>Price</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for c in cars %}
+    <tr>
+      <td><a href="{{ url_for('car_detail', car_id=c.id) }}">{{ c.brand }}</a></td>
+      <td>{{ c.model }}</td>
+      <td>{{ c.year }}</td>
+      <td>{{ c.purchase_price }}</td>
+      <td>{{ 'Sold' if c.sold else 'In Stock' }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

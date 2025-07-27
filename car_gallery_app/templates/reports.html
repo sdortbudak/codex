@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h3>Reports</h3>
+<ul>
+  <li>Total purchase: {{ total_purchase }}</li>
+  <li>Total expenses: {{ total_expense }}</li>
+  <li>Total sales: {{ total_sales }}</li>
+  <li>Profit: {{ profit }}</li>
+  <li>Sold cars: {{ sold_count }}</li>
+  <li>Cars in stock: {{ stock_count }}</li>
+</ul>
+{% endblock %}
