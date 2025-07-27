@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block content %}
+<form method="post" class="mt-5" style="max-width:400px;margin:auto;">
+  <h3 class="mb-3">Login</h3>
+  <div class="mb-3">
+    <input type="text" name="username" class="form-control" placeholder="Username">
+  </div>
+  <div class="mb-3">
+    <input type="password" name="password" class="form-control" placeholder="Password">
+  </div>
+  <button class="btn btn-primary" type="submit">Login</button>
+</form>
+{% endblock %}
